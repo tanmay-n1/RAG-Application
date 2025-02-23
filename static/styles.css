@@ -2,6 +2,7 @@
 body {
     font-family: 'Inter', sans-serif;
     background: #121212;
+    color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,16 +10,24 @@ body {
     margin: 0;
 }
 
-/* Chat Container */
-.chat-container {
-    width: 400px;
+/* Container */
+.container {
+    display: flex;
+    width: 90%; /* Slightly wider container */
+    height: 90vh;
+    gap: 20px;
+}
+
+/* Chat Section (Right) */
+.chat-section {
+    width: 50%;
     background: #1e1e1e;
-    color: #f4f4f4;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end; /* Align chat box to the bottom */
+    overflow: hidden;
 }
 
 /* Chat Header */
@@ -39,10 +48,9 @@ body {
 
 /* Chat Box */
 .chat-box {
-    flex: 1;
+    flex: 1; /* Fill the remaining space */
     padding: 15px;
     overflow-y: auto;
-    max-height: 400px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -68,14 +76,6 @@ body {
     background: #007bff;
     color: white;
     align-self: flex-end;
-}
-
-/* Typing Indicator */
-.typing-indicator {
-    font-style: italic;
-    font-size: 13px;
-    color: #999;
-    align-self: flex-start;
 }
 
 /* Input Area */
@@ -111,6 +111,76 @@ body {
 
 .input-area button:hover {
     background: #0056b3;
+}
+
+/* Summary Section (Left) */
+.summary-section {
+    width: 50%;
+    background: #1e1e1e; /* Darker background for contrast */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.summary-section h2 {
+    color: #f4f4f4;
+    font-size: 26px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff; /* Accent line under the title */
+    padding-bottom: 10px;
+}
+
+.summary-section p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* Book Styles */
+.book {
+    background: #292929; /* Slightly lighter background for books */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+.book:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4); /* Shadow on hover */
+}
+
+.book h3 {
+    font-size: 18px;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+.book p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* Suggested Questions */
+.questions-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.questions-list li {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #292929; /* Background for questions */
+    border-radius: 8px;
+    transition: background 0.2s ease; /* Smooth hover effect */
+}
+
+.questions-list li:hover {
+    background: #333; /* Slightly lighter on hover */
 }
 
 /* Animations */

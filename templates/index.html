@@ -7,19 +7,48 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <img src="{{ url_for('static', filename='chat-icon.png') }}" alt="Chatbot Logo">
-            <h2>AI Chatbot</h2>
+    <div class="container">
+        <!-- Left: Book Summaries -->
+        <div class="summary-section">
+            <h2>📚 Learn from These Books</h2>
+            <p>Ask me questions about these books:</p>
+            <ul class="questions-list">
+                <li>• What is the main idea of <b>Atomic Habits</b>?</li>
+                <li>• How does <b>Thinking, Fast and Slow</b> explain biases?</li>
+                <li>• What economic concepts are discussed in <b>Freakonomics</b>?</li>
+            </ul>
+
+            <div class="book">
+                <h3>📖 Atomic Habits – James Clear</h3>
+                <p>A practical guide on how small daily habits lead to remarkable improvements. The book introduces the **4 Laws of Behavior Change** and emphasizes the power of compounding habits.</p>
+            </div>
+
+            <div class="book">
+                <h3>📖 Thinking, Fast and Slow – Daniel Kahneman</h3>
+                <p>Explores the two systems of thinking: **System 1 (fast, intuitive)** and **System 2 (slow, rational)**. The book explains how biases influence our decisions.</p>
+            </div>
+
+            <div class="book">
+                <h3>📖 Freakonomics – Steven D. Levitt</h3>
+                <p>An unconventional look at economics, revealing the hidden incentives behind everyday behaviors. It covers topics like crime rates, parenting myths, and cheating in sumo wrestling.</p>
+            </div>
         </div>
 
-        <div class="chat-box" id="chat-box">
-            <div class="message bot">👋 Hello! Ask me anything about these books.</div>
-        </div>
+        <!-- Right: Chatbot Section -->
+        <div class="chat-section">
+            <div class="chat-header">
+                <img src="{{ url_for('static', filename='chat-icon.png') }}" alt="Chatbot Logo">
+                <h2>AI Chatbot</h2>
+            </div>
 
-        <div class="input-area">
-            <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
-            <button onclick="sendMessage()">➤</button>
+            <div class="chat-box" id="chat-box">
+                <div class="message bot">👋 Hello! Ask me anything about these books.</div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type a question..." autocomplete="off">
+                <button onclick="sendMessage()">➤</button>
+            </div>
         </div>
     </div>
 

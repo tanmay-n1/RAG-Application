@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Merriweather', serif; /* Classic serif font */
     background: #121212;
     color: #f4f4f4;
     display: flex;
@@ -13,7 +13,7 @@ body {
 /* Container */
 .container {
     display: flex;
-    width: 90%; /* Slightly wider container */
+    width: 90%;
     height: 90vh;
     gap: 20px;
 }
@@ -38,6 +38,7 @@ body {
     padding: 15px;
     font-size: 18px;
     font-weight: bold;
+    border-bottom: 1px solid #444; /* Subtle border for separation */
 }
 
 .chat-header img {
@@ -53,29 +54,32 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px; /* Increased gap for better spacing */
     scrollbar-width: thin;
 }
 
 /* Messages */
 .message {
-    padding: 12px;
-    border-radius: 10px;
+    padding: 12px 16px;
+    border-radius: 12px;
     max-width: 75%;
-    line-height: 1.5;
-    font-size: 14px;
+    line-height: 1.6;
+    font-size: 15px;
     animation: fadeIn 0.3s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
 .bot {
     background: #2d2d2d;
     align-self: flex-start;
+    border: 1px solid #444; /* Subtle border for bot messages */
 }
 
 .user {
     background: #007bff;
     color: white;
     align-self: flex-end;
+    border: 1px solid #005bb5; /* Subtle border for user messages */
 }
 
 /* Input Area */
@@ -91,11 +95,12 @@ body {
     flex: 1;
     padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     outline: none;
     font-size: 14px;
     background: #3a3a3a;
     color: white;
+    font-family: 'Merriweather', serif; /* Consistent font */
 }
 
 .input-area button {
@@ -105,8 +110,9 @@ body {
     padding: 12px 15px;
     margin-left: 8px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
+    font-family: 'Merriweather', serif; /* Consistent font */
 }
 
 .input-area button:hover {
@@ -116,7 +122,7 @@ body {
 /* Summary Section (Left) */
 .summary-section {
     width: 50%;
-    background: #1e1e1e; /* Darker background for contrast */
+    background: #1e1e1e;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -128,38 +134,41 @@ body {
     margin-bottom: 20px;
     border-bottom: 2px solid #007bff; /* Accent line under the title */
     padding-bottom: 10px;
+    font-weight: 700; /* Bold title */
 }
 
 .summary-section p {
     font-size: 16px;
     color: #bbb;
-    line-height: 1.6;
+    line-height: 1.8; /* Increased line height for readability */
 }
 
 /* Book Styles */
 .book {
-    background: #292929; /* Slightly lighter background for books */
+    background: #292929;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-top: 15px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #444; /* Subtle border for books */
 }
 
 .book:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4); /* Shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .book h3 {
     font-size: 18px;
     color: #f4f4f4;
     margin-bottom: 10px;
+    font-weight: 600; /* Semi-bold for book titles */
 }
 
 .book p {
     font-size: 16px;
     color: #bbb;
-    line-height: 1.6;
+    line-height: 1.8; /* Increased line height for readability */
 }
 
 /* Suggested Questions */
@@ -173,14 +182,15 @@ body {
     font-size: 16px;
     color: #bbb;
     margin-bottom: 10px;
-    padding: 10px;
-    background: #292929; /* Background for questions */
+    padding: 12px;
+    background: #292929;
     border-radius: 8px;
-    transition: background 0.2s ease; /* Smooth hover effect */
+    transition: background 0.2s ease;
+    border: 1px solid #444; /* Subtle border for questions */
 }
 
 .questions-list li:hover {
-    background: #333; /* Slightly lighter on hover */
+    background: #333;
 }
 
 /* Animations */
